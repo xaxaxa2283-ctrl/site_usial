@@ -65,3 +65,22 @@ document.addEventListener('DOMContentLoaded', function(){
 
 
 });
+const burgerBtn = document.getElementById('burgerBtn');
+const nav = document.querySelector('.nav');
+
+burgerBtn.addEventListener('click', () => {
+  nav.classList.toggle('open');
+  burgerBtn.classList.toggle('active');
+
+  // Блокируем прокрутку фона
+  document.body.style.overflow = nav.classList.contains('open') ? 'hidden' : '';
+});
+
+// Плавное закрытие меню при клике по пункту
+document.querySelectorAll('.nav a').forEach(link => {
+  link.addEventListener('click', () => {
+    nav.classList.remove('open');
+    burgerBtn.classList.remove('active');
+    document.body.style.overflow = '';
+  });
+});
