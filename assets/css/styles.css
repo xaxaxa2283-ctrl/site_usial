@@ -89,6 +89,12 @@ a{color:inherit;text-decoration:none}
 .hero{display:grid;grid-template-columns:1fr 360px;gap:24px;align-items:center;padding:28px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);border-radius:12px}
 .hero .meta{font-size:14px;opacity:0.9;margin-bottom:8px}
 .hero .meta img{width:120%;height:100px}
+.hero-text {
+  margin-top: -180px;
+  max-width: 480px;
+  font-weight: 700;
+}
+
 .hero h1{font-size:28px;margin:6px 0 12px}
 .hero p{margin:0 0 16px;color:rgba(230,238,248,0.85)}
 .hero .buttons{display:flex;gap:12px}
