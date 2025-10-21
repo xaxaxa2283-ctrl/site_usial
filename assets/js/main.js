@@ -100,8 +100,6 @@ overlay.addEventListener('click', () => {
   overlay.classList.remove('active');
 });
 
-
-document.addEventListener('DOMContentLoaded', function() {
   // Открытие модального окна
   document.querySelectorAll('[data-open]').forEach(btn => {
     btn.addEventListener('click', function() {
@@ -125,5 +123,4 @@ document.addEventListener('DOMContentLoaded', function() {
       if (e.target === modal) modal.classList.remove('active');
     });
   });
-});
 
