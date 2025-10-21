@@ -317,7 +317,6 @@ a{color:inherit;text-decoration:none}
   position: fixed;
   inset: 0;
   background: rgba(0,0,0,0.6);
-  display: flex;
   justify-content: center;
   align-items: center;
   padding: 20px;
@@ -333,6 +332,7 @@ a{color:inherit;text-decoration:none}
   padding: 20px;
   max-width: 1000px;
   width: 100%;
+  position: relative;
 }
 
 /* Анимация переключения разделов */
