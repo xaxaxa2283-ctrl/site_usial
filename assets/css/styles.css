@@ -90,7 +90,9 @@ a{color:inherit;text-decoration:none}
 .hero .meta{font-size:14px;opacity:0.9;margin-bottom:8px}
 .hero .meta img{width:120%;height:100px}
 .hero-text {
-  max-width: 500px;
+  margin-top: -180px;
+  max-width: 480px;
+  font-weight: 700;
 }
 
 .hero h1 {
