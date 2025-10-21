@@ -90,9 +90,7 @@ a{color:inherit;text-decoration:none}
 .hero .meta{font-size:14px;opacity:0.9;margin-bottom:8px}
 .hero .meta img{width:120%;height:100px}
 .hero-text {
-  margin-top: -170px;
-  max-width: 480px;
-  font-weight: 700;
+  max-width: 500px;
 }
 
 .hero h1 {
@@ -112,6 +110,7 @@ a{color:inherit;text-decoration:none}
 .btn.primary{background: linear-gradient(to right, blue, #ff8628);color:white;border:none}
 .hero .images{display:flex;gap:8px;align-items:center}
 .hero .images img{width:140px;border-radius:8px;box-shadow:0 8px 30px rgba(0,0,0,0.6)}
+
 
 
 .carousel-icons {
