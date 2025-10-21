@@ -438,43 +438,6 @@ a{color:inherit;text-decoration:none}
   line-height: 1.75;
 
 }
-/* Бургер скрываем на ПК */
-.burger {
-  display: none;
-  font-size: 32px;
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
-  margin-left: 20px;
-  transition: transform 0.3s ease;
-}
 
-.burger.active {
-  transform: rotate(90deg);
-}
-
-/* Мобильное меню — появится ниже */
-@media (max-width: 768px) {
-  .burger {
-    display: block;
-  }
-  .nav {
-    display: none;
-  }
-  .nav.open {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    background: rgba(0,0,0,0.4);
-    padding: 20px;
-    border-radius: 12px;
-    position: absolute;
-    top: 65px;
-    right: 15px;
-  animation: slideDown 0.3s ease forwards;
-  opacity: 0;
-  transform: translateY(-10px);
-}
 
 
