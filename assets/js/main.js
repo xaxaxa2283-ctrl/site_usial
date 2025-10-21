@@ -100,3 +100,30 @@ overlay.addEventListener('click', () => {
   overlay.classList.remove('active');
 });
 
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Открытие модального окна
+  document.querySelectorAll('[data-open]').forEach(btn => {
+    btn.addEventListener('click', function() {
+      const modalId = this.getAttribute('data-open');
+      const modal = document.getElementById(modalId);
+      if (modal) modal.classList.add('active');
+    });
+  });
+
+  // Закрытие модального окна при клике на крестик
+  document.querySelectorAll('.modal .close').forEach(btn => {
+    btn.addEventListener('click', function() {
+      const modal = this.closest('.modal');
+      if (modal) modal.classList.remove('active');
+    });
+  });
+
+  // Закрытие при клике на фон
+  document.querySelectorAll('.modal').forEach(modal => {
+    modal.addEventListener('click', function(e) {
+      if (e.target === modal) modal.classList.remove('active');
+    });
+  });
+});
+
