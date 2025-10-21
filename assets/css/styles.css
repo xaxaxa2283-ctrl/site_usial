@@ -391,7 +391,9 @@ a{color:inherit;text-decoration:none}
   padding: 40px 0;
 }
 .hero-text {
-  max-width: 500px;
+  margin-top: -180px;
+  max-width: 480px;
+  font-weight: 700;
 }
 .hero h1 {
   font-size: 32px;
