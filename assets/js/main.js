@@ -45,82 +45,31 @@ document.addEventListener('DOMContentLoaded', function(){
     });
   }
 
-  // Простейшие модальные окна
-  document.querySelectorAll('[data-open]').forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      const modalId = btn.dataset.open;
+document.addEventListener('DOMContentLoaded', () => {
+  const openBtns = document.querySelectorAll('[data-open]');
+  const closeBtns = document.querySelectorAll('.modal .close');
+
+  openBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const modalId = btn.getAttribute('data-open');
       const modal = document.getElementById(modalId);
-      if(modal) modal.style.display = 'flex';
+      if(modal) modal.classList.add('active');
     });
   });
 
-  document.querySelectorAll('.modal .close').forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
+  closeBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
       const modal = btn.closest('.modal');
-      if(modal) modal.style.display = 'none';
+      if(modal) modal.classList.remove('active');
     });
   });
 
-
-});
-const burgerBtn = document.getElementById('burgerBtn');
-const nav = document.querySelector('.nav');
-
-burgerBtn.addEventListener('click', () => {
-  nav.classList.toggle('open');
-  burgerBtn.classList.toggle('active');
-
-  // Блокируем прокрутку фона
-  document.body.style.overflow = nav.classList.contains('open') ? 'hidden' : '';
-});
-
-// Плавное закрытие меню при клике по пункту
-document.querySelectorAll('.nav a').forEach(link => {
-  link.addEventListener('click', () => {
-    nav.classList.remove('open');
-    burgerBtn.classList.remove('active');
-    document.body.style.overflow = '';
-  });
-});
-
-
-const burger = document.getElementById('burgerBtn');
-const mobileMenu = document.getElementById('mobileMenu');
-const overlay = document.getElementById('overlay');
-
-burger.addEventListener('click', () => {
-  mobileMenu.classList.toggle('active');
-  overlay.classList.toggle('active');
-});
-
-overlay.addEventListener('click', () => {
-  mobileMenu.classList.remove('active');
-  overlay.classList.remove('active');
-});
-
-  // Открытие модального окна
-  document.querySelectorAll('[data-open]').forEach(btn => {
-    btn.addEventListener('click', function() {
-      const modalId = this.getAttribute('data-open');
-      const modal = document.getElementById(modalId);
-      if (modal) modal.classList.add('active');
-    });
-  });
-
-  // Закрытие модального окна при клике на крестик
-  document.querySelectorAll('.modal .close').forEach(btn => {
-    btn.addEventListener('click', function() {
-      const modal = this.closest('.modal');
-      if (modal) modal.classList.remove('active');
-    });
-  });
-
-  // Закрытие при клике на фон
+  // Закрытие по клику вне контента
   document.querySelectorAll('.modal').forEach(modal => {
-    modal.addEventListener('click', function(e) {
-      if (e.target === modal) modal.classList.remove('active');
+    modal.addEventListener('click', e => {
+      if(e.target === modal) modal.classList.remove('active');
     });
   });
+});
+
 
