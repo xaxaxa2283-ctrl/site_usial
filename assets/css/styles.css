@@ -1,4 +1,4 @@
-
+ь
 /* Simple styles for GamePlay one-page site (placeholder) */
 html {
   scroll-behavior: smooth;
@@ -324,7 +324,9 @@ a{color:inherit;text-decoration:none}
   overflow-y: auto;
   z-index: 999;
 }
-
+.modal.active {
+  display: flex; /* показывается только при добавлении класса active */
+}
 .modal-content {
   background: #071026;
   border-radius: 12px;
